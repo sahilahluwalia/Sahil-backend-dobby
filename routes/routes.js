@@ -106,7 +106,7 @@ const token = (req, res) => {
 
 function generateAccessToken(existingUser) {
   return jsonwebtoken.sign({ email: existingUser.email }, KEY, {
-    expiresIn: "10m",
+    expiresIn: "1000m",
   });
 }
 const signout = (req, res) => {
